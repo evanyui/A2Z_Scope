@@ -4,7 +4,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "../a2zscope.github.io/"),
+    path: path.resolve(__dirname, "../evanyui.github.io/"),
     filename: "bundle.js"
   },
   module: {
@@ -33,7 +33,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: path.resolve("./src/index.html"),
-      filename: path.resolve(__dirname, "../a2zscope.github.io/index.html")
+      filename: path.resolve(__dirname, "../evanyui.github.io/index.html")
     })
   ],
   resolve: {
