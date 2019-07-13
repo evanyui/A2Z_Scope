@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Camera from 'react-html5-camera-photo';
+import Camera, { FACING_MODES } from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
@@ -32,6 +32,7 @@ class FullscreenCamera extends Component {
                 <Camera 
                 onTakePhoto = { (dataUri) =>  this.onTakePhoto(dataUri) }
                 isFullscreen = { true }
+                idealFacingMode = { FACING_MODES.ENVIRONMENT }
                 />
             </div>
         );
