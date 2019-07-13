@@ -1,0 +1,37 @@
+.appBar {
+    background-color: white !important;
+}
+
+.appBar .MuiToolbar-root {
+    min-height: 120px;
+}
+
+.appBar .button {
+    margin-left: 50%;
+    background-color: #75A4FE !important;
+    color: white;
+    height: 80px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px #d6d6d6 !important;
+}
+
+.appBar .button * {
+    text-transform: none;
+}
+
+.buttonText {
+    font-size: 26px;
+}
+
+.backIcon {
+    margin-right: 20px;
+}
+
+.MuiAppBar-colorPrimary {
+    color: #595959 !important;
+}
+
+video {
+    height: calc(100vh - 140px) !important;
+}
