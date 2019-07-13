@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Title from "./components/Title";
+import FullscreenCamera from "./containers/FullscreenCamera";
 
 ReactDOM.render(
-  <Title/>,
+  <FullscreenCamera/>,
   document.getElementById('app')
 );
