@@ -12,6 +12,26 @@ import { faAngleLeft, faUpload } from '@fortawesome/free-solid-svg-icons';
 import "./FullscreenCamera.css";
 
 class FullscreenCamera extends Component {
+
+    constructor(props) {
+        super(props);
+        this.onTakePhoto = this.onTakePhoto.bind(this);
+        this.onResponse = this.onResponse.bind(this);
+    }
+
+    onTakePhoto(dataUri) {
+        console.log(dataUri);
+        //TODO: run process
+    }
+
+    onCameraStop() {
+        
+    }
+
+    onResponse(result) {
+
+    }
+
     render() {
         return (
             <div>
@@ -19,20 +39,24 @@ class FullscreenCamera extends Component {
                     <Toolbar>
                         <FontAwesomeIcon className="backIcon" icon={ faAngleLeft } size="3x"/>
                         <Typography className="" variant="h4">
-                        home
+                        Using front camera
                         </Typography>
                         <Button className="button" color="default" size="large">
                             <FontAwesomeIcon className="backIcon" icon={ faUpload } size="2x"/> 
-                            <Typography className="buttonText" variant="p">
+                            <Typography className="buttonText" variant="button">
                                 Upload a picture
                             </Typography>
                         </Button>
                     </Toolbar>
                 </AppBar>
                 <Camera 
-                onTakePhoto = { (dataUri) =>  this.onTakePhoto(dataUri) }
+                onTakePhoto = { this.onTakePhoto }
                 isFullscreen = { true }
                 idealFacingMode = { FACING_MODES.ENVIRONMENT }
+                isMaxResolution = { true }
+                isImageMirror = { true }
+                isSilentMode = { true }
+                onCameraStop = { this.onCameraStop }
                 />
             </div>
         );
